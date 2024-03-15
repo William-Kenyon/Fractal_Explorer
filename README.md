@@ -1,10 +1,10 @@
-Program for exploring various fractals:
+<h1>Program for exploring various fractals:</h1>
 - Mandelbrot
 - Variations (different complex equations)
 - Pendulum (visualisation of chaotic nature of double pendulums)
 
 
-Keybindings:
+<h2>Keybindings:</h2>
 - WASD movement
 - (Shift) Space for zooming in and out
 - Q,E to change iterations
@@ -14,7 +14,7 @@ Keybindings:
 - U,I to switch variations
 
 
-Some of my favourite images:
+<h2>Some of my favourite images:</h2>
 ![Swirls](https://github.com/William-Kenyon/Fractal_Explorer/blob/main/images/dark.png)
 
 ![Minibrot](https://github.com/William-Kenyon/Fractal_Explorer/blob/main/images/mishapen.png)
