@@ -10,4 +10,4 @@ Keybindings:
 - Shift + Q,E to change color scale
 - Shift + Ctrl + Q,E to offset color
 - O to switch fractals
-- U,I to switch to variations
+- U,I to switch variations
