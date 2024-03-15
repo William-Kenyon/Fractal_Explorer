@@ -90,58 +90,56 @@ void keystates::update(GLFWwindow* window, int key, int scancode, int action, in
 		if (key == GLFW_KEY_BACKSPACE) {
 			if (user_input.length() != 0) {user_input.pop_back();}
 		}
-
-		//std::cout << user_input << std::endl;
 		return;
 	}
 	
 
 	if (action == GLFW_RELEASE) {
-        switch (key) {
-            case GLFW_KEY_R:
-                gs.set_defaults();
-                break;
-            case GLFW_KEY_P:
-                gs.output_values();
-                break;
-            case GLFW_KEY_C:
-                gs.fancy_color = 1 - gs.fancy_color;
-                break;
+        	switch (key) {
+	            	case GLFW_KEY_R:
+	                	gs.set_defaults();
+	                	break;
+			case GLFW_KEY_P:
+	                	gs.output_values();
+	                	break;
+			case GLFW_KEY_C:
+	                	gs.fancy_color = 1 - gs.fancy_color;
+	                	break;
 
-	case GLFW_KEY_X:
-		ks.input_mode = 2;
-		user_input = "";
-		ks.set_defaults();
-		return;
-	case GLFW_KEY_Y:
-		ks.input_mode = 3;
-		user_input = "";
-		ks.set_defaults();
-		return;
-
-	case GLFW_KEY_U:
-		gs.variant -= 1;
-		if (gs.variant == -1) {gs.variant = 0;}
-		break;
-	case GLFW_KEY_I:
-		gs.variant++;
-		break;
-	case GLFW_KEY_O:
-		gs.mode++;
-		if (gs.mode == 3) {gs.mode = 0;}
-			switch (gs.mode) {
-				case 0:
-					create_gl_program("shader.vert", "mandelbrot.frag");
-					break;
-				case 1:
-					create_gl_program("shader.vert", "variations.frag");
-					break;
-				case 2:
-					create_gl_program("shader.vert", "pendulum.frag");
-					break;
-			}
-		break;
-        	}
+			case GLFW_KEY_X:
+				ks.input_mode = 2;
+				user_input = "";
+				ks.set_defaults();
+				return;
+			case GLFW_KEY_Y:
+				ks.input_mode = 3;
+				user_input = "";
+				ks.set_defaults();
+				return;
+		
+			case GLFW_KEY_U:
+				gs.variant -= 1;
+				if (gs.variant == -1) {gs.variant = 0;}
+				break;
+			case GLFW_KEY_I:
+				gs.variant++;
+				break;
+			case GLFW_KEY_O:
+				gs.mode++;
+				if (gs.mode == 3) {gs.mode = 0;}
+				switch (gs.mode) {
+					case 0:
+						create_gl_program("shader.vert", "mandelbrot.frag");
+						break;
+					case 1:
+						create_gl_program("shader.vert", "variations.frag");
+						break;
+					case 2:
+						create_gl_program("shader.vert", "pendulum.frag");
+						break;
+				}
+				break;
+		}
 	}
 
 	if (action == GLFW_RELEASE || action == GLFW_PRESS) {
@@ -206,11 +204,11 @@ void gamestate::update(keystates ks) {
 		x_centre += rotated.x; y_centre += rotated.y;}
 
 	if (ks.left) {
-        rotated = rotate(-move_speed*zoom, 0, rotation);
+        	rotated = rotate(-move_speed*zoom, 0, rotation);
 		x_centre += rotated.x; y_centre += rotated.y;}
 
 	if (ks.right) {
-        rotated = rotate( move_speed*zoom, 0, rotation);
+        	rotated = rotate( move_speed*zoom, 0, rotation);
 		x_centre += rotated.x; y_centre += rotated.y;}
 
 	if (ks.space) {
