@@ -18,6 +18,7 @@
 </ul>
 
 <h2>Some of my favourite images:</h2>
+
 ![Swirls](https://github.com/William-Kenyon/Fractal_Explorer/blob/main/images/dark.png)
 
 ![Minibrot](https://github.com/William-Kenyon/Fractal_Explorer/blob/main/images/mishapen.png)
