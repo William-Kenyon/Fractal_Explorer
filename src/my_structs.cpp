@@ -17,14 +17,14 @@ vec2 rotate(float x, float y, float rotation) {
 void keystates::set_defaults() {
 	shift = false;
 	ctrl = false;
-	
+
 	up = false;
 	down = false;
 	left = false;
 	right = false;
 	q = false;
 	e = false;
-	
+
 	one = false;
 	two = false;
 	space = false;
@@ -35,11 +35,11 @@ void gamestate::set_defaults() {
 	y_centre = 0.0;
 	max_iters = 300.0;
 	bailout = 100.0;
-	
+
 	fancy_color = 1;
 	color_scale = 1.0;
 	color_offset = 12.0;
-	
+
 	rotation = 0.0;
 	zoom = 2.0;
 	move_speed = 0.02;
@@ -70,42 +70,30 @@ void keystates::update(GLFWwindow* window, int key, int scancode, int action, in
 			catch (std::invalid_argument) {std::cout << "Invalid arguement for std::stod(user_input)\n" << user_input << std::endl;}
 		}
 		
-		if (key == GLFW_KEY_C) {
-			user_input = "";
-		}
-
-		if (key == GLFW_KEY_MINUS) {
-			user_input.append("-");
-		}
-
+		if (key == GLFW_KEY_C) {user_input = "";}
+		if (key == GLFW_KEY_MINUS) {user_input.append("-");}
+		if (key == GLFW_KEY_PERIOD) {user_input.append(".");}
+		if (key == GLFW_KEY_BACKSPACE) {if (user_input.length() != 0) {user_input.pop_back();}}
+		
 		if (key >= GLFW_KEY_0 && key <= GLFW_KEY_9) {
 			int new_digit = key - GLFW_KEY_0;
 			user_input.append(std::to_string(new_digit));
-		}
-
-		if (key == GLFW_KEY_PERIOD) {
-			user_input.append(".");
-		}
-
-		if (key == GLFW_KEY_BACKSPACE) {
-			if (user_input.length() != 0) {user_input.pop_back();}
 		}
 		return;
 	}
 	
 
 	if (action == GLFW_RELEASE) {
-        	switch (key) {
-	            	case GLFW_KEY_R:
-	                	gs.set_defaults();
-	                	break;
+		switch (key) {
+			case GLFW_KEY_R:
+				gs.set_defaults();
+				break;
 			case GLFW_KEY_P:
-	                	gs.output_values();
-	                	break;
+				gs.output_values();
+				break;
 			case GLFW_KEY_C:
-	                	gs.fancy_color = 1 - gs.fancy_color;
-	                	break;
-
+				gs.fancy_color = 1 - gs.fancy_color;
+				break;
 			case GLFW_KEY_X:
 				ks.input_mode = 2;
 				user_input = "";
@@ -116,7 +104,7 @@ void keystates::update(GLFWwindow* window, int key, int scancode, int action, in
 				user_input = "";
 				ks.set_defaults();
 				return;
-		
+
 			case GLFW_KEY_U:
 				gs.variant -= 1;
 				if (gs.variant == -1) {gs.variant = 0;}
@@ -162,7 +150,7 @@ void keystates::update(GLFWwindow* window, int key, int scancode, int action, in
 			case GLFW_KEY_D:
 				right = action;
 				break;
-		
+
 			case GLFW_KEY_Q:
 				q = action;
 				break;
@@ -180,17 +168,18 @@ void keystates::update(GLFWwindow* window, int key, int scancode, int action, in
 				two = action;
 				break;
 		}
+		return;
 	}
 }
 
 
 
 void gamestate::output_values() {
-    printf("------------------\n");
-    system("screenCapture output/output.png");
-    printf("Real: %.20f\n", x_centre);
-    printf("Imag: %.20f\n", y_centre);
-    printf("Zoom: %.20f\n", zoom);
+	printf("------------------\n");
+	system("screenCapture output/output.png");
+	printf("Real: %.20f\n", x_centre);
+	printf("Imag: %.20f\n", y_centre);
+	printf("Zoom: %.20f\n", zoom);
 }
 
 void gamestate::update(keystates ks) {
@@ -200,15 +189,15 @@ void gamestate::update(keystates ks) {
 		x_centre += rotated.x; y_centre += rotated.y;}
 
 	if (ks.down) {
-        rotated = rotate(0, move_speed*zoom, rotation);
+		rotated = rotate(0, move_speed*zoom, rotation);
 		x_centre += rotated.x; y_centre += rotated.y;}
 
 	if (ks.left) {
-        	rotated = rotate(-move_speed*zoom, 0, rotation);
+		rotated = rotate(-move_speed*zoom, 0, rotation);
 		x_centre += rotated.x; y_centre += rotated.y;}
 
 	if (ks.right) {
-        	rotated = rotate( move_speed*zoom, 0, rotation);
+		rotated = rotate( move_speed*zoom, 0, rotation);
 		x_centre += rotated.x; y_centre += rotated.y;}
 
 	if (ks.space) {
