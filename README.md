@@ -3,6 +3,8 @@ Program for exploring various fractals:
 - Variations (different complex equations)
 - Pendulum (visualisation of chaotic nature of double pendulums)
 
+
+
 Keybindings:
 - WASD movement
 - (Shift) Space for zooming in and out
