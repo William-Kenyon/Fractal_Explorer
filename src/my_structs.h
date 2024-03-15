@@ -12,7 +12,7 @@ struct vec2 {
 
 struct keystates {
 	bool shift, ctrl;
-
+	
 	bool up, down, left, right;
 	bool q, e;
 	bool one, two;
@@ -25,24 +25,24 @@ struct keystates {
 };
 
 struct gamestate {
-    int mode; //mandelbrot, variation, pendulum etc...
+	int mode; //mandelbrot, variation, pendulum etc...
 	int variant; //variations on the mandelbrot formula
-
-    double x_centre;
-    double y_centre;
-    float max_iters;
-    float bailout;
-
+	
+	double x_centre;
+	double y_centre;
+	float max_iters;
+	float bailout;
+	
 	int fancy_color;
-    float color_scale;
-    float color_offset;
-    
+	float color_scale;
+	float color_offset;
+	
 	float rotation;
-    float zoom;
+	float zoom;
 	float move_speed;
-
-    void set_defaults();
-    void output_values();
+	
+	void set_defaults();
+	void output_values();
 	void update(keystates ks);
 };
 
