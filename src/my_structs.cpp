@@ -108,39 +108,39 @@ void keystates::update(GLFWwindow* window, int key, int scancode, int action, in
                 gs.fancy_color = 1 - gs.fancy_color;
                 break;
 
-			case GLFW_KEY_X:
-				ks.input_mode = 2;
-				user_input = "";
-				ks.set_defaults();
-				return;
-			case GLFW_KEY_Y:
-				ks.input_mode = 3;
-				user_input = "";
-				ks.set_defaults();
-				return;
+	case GLFW_KEY_X:
+		ks.input_mode = 2;
+		user_input = "";
+		ks.set_defaults();
+		return;
+	case GLFW_KEY_Y:
+		ks.input_mode = 3;
+		user_input = "";
+		ks.set_defaults();
+		return;
 
-			case GLFW_KEY_U:
-				gs.variant -= 1;
-				if (gs.variant == -1) {gs.variant = 0;}
+	case GLFW_KEY_U:
+		gs.variant -= 1;
+		if (gs.variant == -1) {gs.variant = 0;}
+		break;
+	case GLFW_KEY_I:
+		gs.variant++;
+		break;
+	case GLFW_KEY_O:
+		gs.mode++;
+		if (gs.mode == 3) {gs.mode = 0;}
+		switch (gs.mode) {
+			case 0:
+				create_gl_program("shader.vert", "mandelbrot.frag");
 				break;
-			case GLFW_KEY_I:
-				gs.variant++;
+			case 1:
+				create_gl_program("shader.vert", "variations.frag");
 				break;
-			case GLFW_KEY_O:
-				gs.mode++;
-				if (gs.mode == 3) {gs.mode = 0;}
-				switch (gs.mode) {
-					case 0:
-						create_gl_program("shader.vert", "mandelbrot.frag");
-						break;
-					case 1:
-						create_gl_program("shader.vert", "variations.frag");
-						break;
-					case 2:
-						create_gl_program("shader.vert", "pendulum.frag");
-						break;
-				}
+			case 2:
+				create_gl_program("shader.vert", "pendulum.frag");
 				break;
+		}
+		break;
         }
     }
 
