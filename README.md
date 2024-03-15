@@ -11,3 +11,8 @@ Keybindings:
 - Shift + Ctrl + Q,E to offset color
 - O to switch fractals
 - U,I to switch variations
+
+
+Some of my favourite images:
+![Swirls](https://github.com/William-Kenyon/Fractal_Explorer/blob/main/images/dark.png)
+![Minibrot](https://github.com/William-Kenyon/Fractal_Explorer/blob/main/images/mishapen.png)
