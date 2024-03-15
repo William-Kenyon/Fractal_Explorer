@@ -126,18 +126,3 @@ void shutdown_gl(GLFWwindow* window) {
 	glfwDestroyWindow(window);
 	glfwTerminate();
 }
-
-
-/*
-void save_image() {
-	fstream output_file("output.binary", ios::out | ios::binary);
-	int* buffer = new int[WIN_WIDTH * WIN_HEIGHT * 3];
-	glClear(GL_COLOR_BUFFER_BIT);
-	glDrawArrays(GL_TRIANGLES, 0, 6);
-	glReadPixels(0, 0, WIN_WIDTH, WIN_HEIGHT, GL_BGR, GL_UNSIGNED_BYTE, buffer);
-	output_file.write((char*)(buffer), WIN_WIDTH*WIN_HEIGHT*3);
-	output_file.close();
-	string width = to_string(WIN_WIDTH);
-	char const *pchar = width.c_str();
-	system("python imagetool.py 1900 1000");
-}*/
