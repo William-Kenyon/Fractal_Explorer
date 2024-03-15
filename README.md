@@ -1,7 +1,9 @@
 <h1>Program for exploring various fractals:</h1>
-- Mandelbrot\n
-- Variations (different complex equations)
-- Pendulum (visualisation of chaotic nature of double pendulums)
+<ul>
+  <li>Mandelbrot</li>
+  <li>Variations (different complex equations)</li>
+  <li>Pendulum (visualisation of chaotic nature of double pendulums)</li>
+</ul>
 
 
 <h2>Keybindings:</h2>
