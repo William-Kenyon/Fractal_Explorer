@@ -1,4 +1,4 @@
-<h1>Program for exploring various fractals:</h1>
+<h1>Program for exploring various fractals</h1>
 <ul>
   <li>Mandelbrot</li>
   <li>Variations (different complex equations)</li>
