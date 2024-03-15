@@ -17,43 +17,43 @@ vec2 rotate(float x, float y, float rotation) {
 void keystates::set_defaults() {
 	shift = false;
 	ctrl = false;
-
+	
 	up = false;
 	down = false;
 	left = false;
 	right = false;
 	q = false;
 	e = false;
-
+	
 	one = false;
 	two = false;
 	space = false;
 }
 
 void gamestate::set_defaults() {
-    x_centre = 0.0;
-    y_centre = 0.0;
-    max_iters = 300.0;
-    bailout = 100.0;
-
-    fancy_color = 1;
-    color_scale = 1.0;
-    color_offset = 12.0;
-
-    rotation = 0.0;
-    zoom = 2.0;
-    move_speed = 0.02;
+	x_centre = 0.0;
+	y_centre = 0.0;
+	max_iters = 300.0;
+	bailout = 100.0;
+	
+	fancy_color = 1;
+	color_scale = 1.0;
+	color_offset = 12.0;
+	
+	rotation = 0.0;
+	zoom = 2.0;
+	move_speed = 0.02;
 }
 
 void windowstate::init(int width, int height, bool is_fullscreen) {
 	win_width  = width;
-    win_height = height;
+	win_height = height;
 	fullscreen = is_fullscreen;
 }
 
 
 void keystates::update(GLFWwindow* window, int key, int scancode, int action, int mods) {
-    if (action == GLFW_PRESS && key == GLFW_KEY_ESCAPE) {
+	if (action == GLFW_PRESS && key == GLFW_KEY_ESCAPE) {
 		glfwSetWindowShouldClose(window, 1);
 		return;
 	} 
@@ -129,22 +129,22 @@ void keystates::update(GLFWwindow* window, int key, int scancode, int action, in
 	case GLFW_KEY_O:
 		gs.mode++;
 		if (gs.mode == 3) {gs.mode = 0;}
-		switch (gs.mode) {
-			case 0:
-				create_gl_program("shader.vert", "mandelbrot.frag");
-				break;
-			case 1:
-				create_gl_program("shader.vert", "variations.frag");
-				break;
-			case 2:
-				create_gl_program("shader.vert", "pendulum.frag");
-				break;
-		}
+			switch (gs.mode) {
+				case 0:
+					create_gl_program("shader.vert", "mandelbrot.frag");
+					break;
+				case 1:
+					create_gl_program("shader.vert", "variations.frag");
+					break;
+				case 2:
+					create_gl_program("shader.vert", "pendulum.frag");
+					break;
+			}
 		break;
-        }
-    }
+        	}
+	}
 
-    if (action == GLFW_RELEASE || action == GLFW_PRESS) {
+	if (action == GLFW_RELEASE || action == GLFW_PRESS) {
 		switch (key) {
 			case GLFW_KEY_LEFT_SHIFT:
 				shift = action;
@@ -152,19 +152,19 @@ void keystates::update(GLFWwindow* window, int key, int scancode, int action, in
 			case GLFW_KEY_LEFT_CONTROL:
 				ctrl = action;
 				break;
-            case GLFW_KEY_W:
-                up = action;
-                break;
-            case GLFW_KEY_S:
-                down = action;
-                break;
-            case GLFW_KEY_A:
+			case GLFW_KEY_W:
+				up = action;
+				break;
+			case GLFW_KEY_S:
+				down = action;
+				break;
+			case GLFW_KEY_A:
 				left = action;
-                break;
-            case GLFW_KEY_D:
-                right = action;
-                break;
-
+				break;
+			case GLFW_KEY_D:
+				right = action;
+				break;
+		
 			case GLFW_KEY_Q:
 				q = action;
 				break;
@@ -181,16 +181,7 @@ void keystates::update(GLFWwindow* window, int key, int scancode, int action, in
 			case GLFW_KEY_2:
 				two = action;
 				break;
-			
-            /*
-			case GLFW_KEY_O:
-				if (action == GLFW_PRESS) {break;}
-				path_index = (path_index + 1) % 3;
-				create_gl_program();
-				break;
-            */
 		}
-		return;
 	}
 }
 
