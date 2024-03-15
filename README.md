@@ -19,6 +19,6 @@
 
 <h2>Some of my favourite images:</h2>
 
-![Swirls](https://github.com/William-Kenyon/Fractal_Explorer/blob/main/images/dark.png)
+<img src="https://github.com/William-Kenyon/Fractal_Explorer/blob/main/images/dark.png" alt="Swirls"></img>
 
-![Minibrot](https://github.com/William-Kenyon/Fractal_Explorer/blob/main/images/mishapen.png)
+<img src="https://github.com/William-Kenyon/Fractal_Explorer/blob/main/images/mishapen.png" alt="Minibrot"></img>
