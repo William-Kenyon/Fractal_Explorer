@@ -15,4 +15,5 @@ Keybindings:
 
 Some of my favourite images:
 ![Swirls](https://github.com/William-Kenyon/Fractal_Explorer/blob/main/images/dark.png)
+
 ![Minibrot](https://github.com/William-Kenyon/Fractal_Explorer/blob/main/images/mishapen.png)
