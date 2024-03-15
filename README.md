@@ -4,7 +4,6 @@ Program for exploring various fractals:
 - Pendulum (visualisation of chaotic nature of double pendulums)
 
 
-
 Keybindings:
 - WASD movement
 - (Shift) Space for zooming in and out
