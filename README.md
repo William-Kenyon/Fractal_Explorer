@@ -16,6 +16,7 @@
   <li>Shift + Ctrl + Q,E to offset colour palette</li>
   <li>O to switch fractals</li>
   <li>U,I to cycle variations</li>
+  <li>Manual control over color palettes (change #DEFINEs in .frag files</li>
 </ul>
 
 <h2>Showcase</h2>
