@@ -176,7 +176,6 @@ void keystates::update(GLFWwindow* window, int key, int scancode, int action, in
 
 void gamestate::output_values() {
 	printf("------------------\n");
-	system("screenCapture output/output.png");
 	printf("Real: %.20f\n", x_centre);
 	printf("Imag: %.20f\n", y_centre);
 	printf("Zoom: %.20f\n", zoom);
