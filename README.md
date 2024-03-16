@@ -19,5 +19,5 @@
 </ul>
 
 <h2>Showcase</h2>
-<img src="https://github.com/William-Kenyon/Fractal_Explorer/blob/main/images/dark.png" alt="Swirls"></img>
+<img src="images/dark.png" alt="Swirls"></img>
 <img src="https://github.com/William-Kenyon/Fractal_Explorer/blob/main/images/mishapen.png" alt="Minibrot"></img>
