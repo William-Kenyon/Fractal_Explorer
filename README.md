@@ -1,7 +1,7 @@
 <h1>Realtime Fractal Exploration</h1>
 <p>A basic program to explore various fractals, focusing on creating pretty results. Including:</p>
 <ul>
-  <li>The base Mandelbrot (64bit precisio)</li>
+  <li>The base Mandelbrot (64bit precision)</li>
   <li>Some variations (uses more interesting complex equations, but only 32bit precision)</li>
   <li>A double pendulum fractal</li>
 </ul>
