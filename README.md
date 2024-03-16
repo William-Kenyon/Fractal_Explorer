@@ -1,5 +1,5 @@
 <h1>Realtime Fractal Exploration</h1>
-<p>A basic program to explore various fractals, with an emphasis on aesthetic results. Including:</p>
+<p>A basic program to explore various fractals, focusing on creating pretty results. Including:</p>
 <ul>
   <li>The base Mandelbrot</li>
   <li>Variations (some new complex equations)</li>
