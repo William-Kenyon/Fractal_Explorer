@@ -3,7 +3,7 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <string>
-#include "my_structs.h"
+#include "my_utils.h"
 #include "my_gui.h"
 
 #define PI 3.141592653589793
