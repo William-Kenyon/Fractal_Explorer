@@ -3,7 +3,7 @@
 <ul>
   <li>The base Mandelbrot</li>
   <li>Variations (some new complex equations)</li>
-  <li>A doubble pendulum fractal (visualisation of their chaotic nature)</li>
+  <li>A double pendulum fractal</li>
 </ul>
 
 <h2>Controls:</h2>
