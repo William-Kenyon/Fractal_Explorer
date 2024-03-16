@@ -1,4 +1,4 @@
-<h1>Program for exploring various fractals</h1>
+<h1>Realtime Exploration of Various Fractals</h1>
 <ul>
   <li>Base Mandelbrot</li>
   <li>Variations (some new complex equations)</li>
