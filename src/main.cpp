@@ -13,16 +13,6 @@ unsigned int vao;
 unsigned int vbo;
 std::string user_input;
 
-
-//opengl function reference
-//https://registry.khronos.org/OpenGL-Refpages/gl4/index.php
-
-//variations of mandelbrot
-//https://nickdrachman.wordpress.com/2019/09/01/fractals-in-the-complex-plane/
-//https://paulbourke.net/fractals/magnet/
-//https://fractalfoundation.org/OFC/OFC-5-5.html
-
-
 int main(int argc, char* argv[]) {
 	gs.set_defaults();
 	ks.set_defaults();
