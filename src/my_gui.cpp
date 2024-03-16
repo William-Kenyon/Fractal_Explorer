@@ -3,7 +3,7 @@
 #include <cmath>
 #include <iostream>
 #include <fstream>
-#include "my_structs.h"
+#include "my_utils.h"
 #include "my_gui.h"
 
 void set_gl_uniforms() {
