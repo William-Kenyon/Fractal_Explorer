@@ -2,7 +2,7 @@
 #include <GLFW/glfw3.h>
 #include <windows.h>
 #include <string>
-#include "my_structs.h"
+#include "my_utils.h"
 #include "my_gui.h"
 
 keystates ks;
