@@ -1,4 +1,5 @@
-<h1>Realtime Exploration of Various Fractals</h1>
+<h1>Realtime Fractal Exploration</h1>
+<p>A basic program to explore various fractals, with an emphasis on aesthetic results. Included fractals:</p>
 <ul>
   <li>Base Mandelbrot</li>
   <li>Variations (some new complex equations)</li>
@@ -17,7 +18,7 @@
   <li>U,I to switch variations</li>
 </ul>
 
-<h2>Some of my favourite images:</h2>
+<h2>My favourites</h2>
 
 <img src="https://github.com/William-Kenyon/Fractal_Explorer/blob/main/images/dark.png" alt="Swirls"></img>
 
